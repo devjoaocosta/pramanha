@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link href={% static 'app/index.css' %} rel="stylesheet" />
+    <title>Pramanhã - Home</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <h1 id="logo">
+                <a href="index.html"><img src={% static 'app/imagens/logo.svg' %} /></a> 
+            </h1>
+
+            <ul>
+                <li id="botao_perfil"><a href="entrar.html"><img src={% static 'app/imagens/entrar.svg' %} /></a></li>
+            </ul>
+        </nav>   
+
+    </header>
+
+    <main>
+
+        <section class="anuncio">
+            <!-- <p class="titulocima">Conheça sua nova</p>
+            <p class="titulobaixo">agenda digital</p> -->
+            <div>
+                
+                <h1>Conheça sua nova <br> agenda digital</h1>
+                <p>Não deixe pramanhã e <br> experimente hoje mesmo.</p>
+                <button type="button"><img src={% static 'app/imagens/run.png' %} />Vamos lá</button>
+            </div>
+            <img src={% static 'app/imagens/note.svg' %} />
+        </section>
+        
+        <section class="sobre">
+            <div>
+                <p>pramanhã tem o objetivo de ajudar alunos federais a manterem suas rotinas organizadas por meio de um processo de agenda simplificado e automatizado, reunindo em um só lugar as principais funções que os discentes necessitam, e focando em um maior contato entre os integrantes das turmas graças a um ambiente colaborativo.</p>
+            </div>
+
+            <img src={% static 'app/imagens/pc.svg' %}/>
+        </section>
+
+        <section class="planejamento">
+            <h1>Se planeje da melhor forma <br> e com mais praticidade!</h1>
+            <section class="diferencas">
+                <div>
+                    <img src={% static 'app/imagens/compartilhamento.png' %}/>
+                    <h2>Compartilhamento</h2>
+                    <p>O Pramanhã permite que seus amigos compartilhem tarefas de forma organizada e prática.</p>
+                </div>
+                <div>
+                    <img src= {% static 'app/imagens/notificar.png' %} />
+                    <h2>Notificação direta</h2>
+                    <p>Te lembramos constantemente das suas tarefas com antecedência, então pode ficar tranquilo quanto a isso.</p>
+                </div>
+                <div>
+                    <img src= {% static 'app/imagens/interface.png' %}/>
+                    <h2>Interface intuitiva</h2>
+                    <p>Possuimos uma interface simples e intuitiva, afim de facilitar seu planejamento.</p>
+                </div>
+        </section>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <address>
+            <div>
+                <p>Pramanhã CIA, 00.123.987/0001-50 </p>
+            </div>
+            <div id="redes_sociais">
+                <a href="https://www.x.com/"><img src={% static 'app/imagens/x.png' %} /></a>
+                <a href="https://instagram.com/"><img src={% static 'app/imagens/instagram.svg' %} /></a>
+                <a href="https://gmail.com/"><img src={% static 'app/imagens/gmail.png' %} /></a>
+            </div>
+        </address>
+
+    </footer>
+
+</body>
+</html>

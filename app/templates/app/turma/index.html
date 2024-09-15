@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link href={% static 'app/index.css' %} rel="stylesheet" />
+    <title>Pramanhã - Home</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+    </style>
+    
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <h1 id="logo">
+                <a href="index.html"><img src="imagens/logo.svg" /></a> 
+            </h1>
+
+            <form action="" id="barra_pesquisa">
+                <input type="search" name="pesquisa" placeholder="Busque sua turma" />
+                <button type="submit"><img src="imagens/lupa.svg" /></button>
+            </form>
+
+            <ul>
+                <li id="botao_not"><button type="button"><img src="imagens/notificacao.svg" /></button></li>
+                <li id="botao_perfil"><a href="login.html"><img src="imagens/conta.svg" /></a></li>
+            </ul>
+        </nav>   
+
+    </header>
+
+    <main>
+
+        <section id="disciplinas_cabecalho">
+
+            <h1>Infoweb 4V</h1>
+
+            <button><img src="imagens/adicionar.svg" /> <span>Adicionar disciplina</span></button>
+
+        </section>
+
+        <section id="disciplinas">
+            <div class="disciplinas" id="disciplina_1" style="background-color: #FF8C45;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_2" style="background-color: #FF5C6D;">
+                <h2>História</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_3" style="background-color: #5ECFFF;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_4" style="background-color: #ADFF5A;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_5" style="background-color: #FF8C45;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_6" style="background-color: #ADFF5A;">
+                <h2>Matemática</h2>   
+            </div>
+            <div class="disciplinas" id="disciplina_7" style="background-color: #5ECFFF;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_8" style="background-color: #FF8C45;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_9" style="background-color: #FF5C6D;">
+                <h2>Matemática</h2>
+            </div>
+            <div class="disciplinas" id="disciplina_10" style="background-color: #ADFF5A;"> 
+                <h2>Matemática</h2>
+            </div>
+            
+        </section>
+
+        <hr id="divisora" />
+
+        <section id="pagina_baixo">
+
+            <section class="cards" id="card_membro">
+
+                <div class="card_cabecalho">
+                    <div class="card_titulo">
+                        <img src="imagens/membros.svg" />
+                        <h1>Membros</h1>
+                    </div>
+
+                    <div>
+                        <button>Ver todos</button>
+                    </div>    
+
+                </div>
+
+                <div class="membros">
+                    <svg height="72" width="72">
+                        <defs>
+                            <clipPath id="icone_perfil">
+                                <circle cx="37" cy="37" r="35" stroke="black" stroke-width="3" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <image width="74" height="74" xlink:href="imagens/rat-dance.gif" clip-path="url(#icone_perfil)" />
+                    </svg>
+                    <div class="informacao_membro">
+                        <h2>Gomes Gomes da Cunha</h2>
+                        <h3>Administrador</h3>
+                    </div>
+                </div>
+
+                <div class="membros">
+                    <svg height="72" width="72">
+                        <defs>
+                            <clipPath id="icone_perfil">
+                                <circle cx="37" cy="37" r="35" stroke="black" stroke-width="3" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <image width="74" height="74" xlink:href="imagens/rat-dance.gif" clip-path="url(#icone_perfil)" />
+                    </svg>
+                    <div class="informacao_membro">
+                        <h2>Gomes Gomes da Cunha</h2>
+                        <h3>Administrador</h3>
+                    </div>
+                </div>
+
+                <div class="membros">
+                    <svg height="72" width="72">
+                        <defs>
+                            <clipPath id="icone_perfil">
+                                <circle cx="37" cy="37" r="35" stroke="black" stroke-width="3" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <image width="74" height="74" xlink:href="imagens/rat-dance.gif" clip-path="url(#icone_perfil)" />
+                    </svg>
+                    <div class="informacao_membro">
+                        <h2>Gomes Gomes da Cunha</h2>
+                        <h3>Administrador</h3>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="cards" id="card_membro">
+
+                <div class="card_cabecalho">
+                    <div class="card_titulo">
+                        <img src="imagens/avisos.svg" />
+                        <h1>Avisos</h1>
+                    </div>
+                    <div>
+                        <button>Ativar notificações</button>
+                    </div>
+                </div>
+
+                <div class="avisos">
+                    <h2>PIU: seminário amanhã</h2>
+                    <h3>11/08</h3>
+                </div>
+                <div class="avisos">
+                    <h2>PIU: seminário amanhã</h2>
+                    <h3>11/08</h3>
+                    </div>
+                <div class="avisos">
+                    <h2>PIU: seminário amanhã</h2>
+                    <h3>11/08</h3>
+                </div>
+
+            </section>
+
+        </section>  
+
+    </main>
+
+    <footer>
+
+        <address>
+            <div>
+                <p>Pramanhã CIA, 00.123.987/0001-50 </p>
+            </div>
+            <div id="redes_sociais">
+                <a href="https://www.x.com/"><img src="imagens/x.svg" /></a>
+                <a href="https://instagram.com/"><img src="imagens/instagram.svg" /></a>
+                <a href="https://gmail.com/"><img src="imagens/gmail.svg" /></a>
+            </div>
+        </address>
+
+    </footer>
+
+</body>
+</html>

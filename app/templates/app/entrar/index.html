@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link href={% static 'app/login.css'%} rel="stylesheet" />
+    <title>Pramanhã - Login</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+            <h1 id="logo">
+                <a href="index.html"><img src={% static 'app/imagens/logo.svg'%} /></a> 
+            </h1> 
+
+    </header>
+
+    <main>
+
+        <form action="{% url 'entrar' %}" method="POST"> {% csrf_token %}
+            <h1>Login</h1>
+        
+            <div id="informacoes">
+
+                <input class="barra_texto" type="text" placeholder="Insira seu nome de usuário" name='username' required/>
+
+                <input class="barra_texto" type="password" placeholder="Insira sua senha" name='senha' required/>
+
+            </div>
+
+            <div id="avisos">
+                <p><a href="registro.html">Esqueceu sua senha?</a></p>
+            </div>
+
+            <div id="botoes">
+                <button type="submit" id="entrar">Entrar</button>
+                <a href="registro.html" id="registrar">Cadastrar-se</a>
+            </div>    
+        </form>
+
+    </main>
+
+    <footer>
+
+        <address>
+            <div>
+                <p>Pramanhã CIA, 00.123.987/0001-50 </p>
+            </div>
+            <div id="redes_sociais">
+                <a href="https://www.x.com/"><img src={% static 'app/imagens/x.svg' %} /></a>
+                <a href="https://instagram.com/"><img src={% static 'app/imagens/instagram.svg' %} /></a>
+                <a href="https://gmail.com/"><img src={% static 'app/imagens/gmail.svg' %} /></a>
+            </div>
+        </address>
+
+    </footer>
+
+</body>
+</html>

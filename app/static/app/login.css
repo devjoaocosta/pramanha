@@ -1,0 +1,149 @@
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Dosis", sans-serif;
+}
+body{
+    color: #1d1d1d;
+    font-family: "Dosis", sans-serif;
+    background-image: url(imagens/fundo.png);
+}
+
+/*Header*/
+
+header{
+    box-shadow: 0 0 15px #1a1a1a; 
+    display: flex; 
+    background-color: #F4ECDB;
+}
+#logo{
+    display: flex;
+    margin: 0 auto;
+    padding: 1em;
+    transition: all .22s ease-in-out;
+}
+#logo:hover{
+    transform: scale(1.1);
+}
+#logo span{
+    font-size: 35px;
+    margin-right: 0.5em;
+    margin-top: 6px;
+}
+#logo img{
+    width: 200px;
+}
+/*Main*/
+
+main{
+    background-image: url(imagens/fundo.png);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+}
+form{
+    margin: 0 auto;
+    display: block;
+    width: 355.7px;
+}
+form h1{
+    font-weight: 600;
+    text-align: center;
+}
+form input{
+    background: none;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+#avisos{
+    margin-bottom: 1.5em;
+}
+#avisos a{
+    color: #3E79AD;
+    font-size: 18px;
+    transition: 150ms;
+}
+#avisos a:hover{
+    color: #295072;
+}
+#entrar{
+    background-color: #EFB9AF;
+    border: 0;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    width: 45%;
+    transition: 180ms;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#entrar:hover{
+    background-color: #EF797E;
+}
+#registrar{
+    background-color: #F4ECDB;
+    border: 0;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    width: 45%;
+    transition: 180ms;
+    border-radius: 4px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+#registrar:hover{
+    background-color: #D8D1C2;
+}
+#botoes{
+    display: flex;
+    justify-content: space-between;
+}
+#informacoes{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.barra_texto{
+    width: 355.7px;
+    font-size: 20px;
+    margin-bottom: 1.5em;
+}
+
+/*Footer*/
+
+footer{
+    font-size: 20px;
+    background-color: #F4ECDB;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer address{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 2em;
+}
+address a img{
+    height: 30px;
+    transition: all .10s ease-in-out;
+}
+address a img:hover{
+    transform: scale(1.1);
+}
+#redes_sociais a{
+    margin-left: 0.8em;
+}
