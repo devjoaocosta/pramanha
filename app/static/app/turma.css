@@ -1,0 +1,256 @@
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Dosis", sans-serif;
+}
+body{
+    color: #1d1d1d;
+}
+
+/*Header*/
+
+header{
+    box-shadow: 0 0 15px #1a1a1a; 
+    display: flex; 
+    background-color: #F4ECDB;
+}
+nav{
+    display: flex;
+    padding: 1.5em;
+    width: 59.9%;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-top: 1em;
+    gap: 5em;
+}
+nav ul button{
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+nav ul img{
+    transition: all .10s ease-in-out;
+}
+nav ul img:hover{
+    transform: scale(1.1);
+}
+nav ul img{
+    width: 30px;
+}
+#logo{
+    margin-top: 10px;
+    transition: all .22s ease-in-out;
+}
+#logo:hover{
+    transform: scale(1.1);
+}
+#logo img{
+    width: 200px;
+}
+#barra_pesquisa{
+    display: inherit;
+    flex: wrap;
+    background-color: #f5f5f5;
+    height: 2.8em;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 12px;
+    margin-top: 7px;
+    width: 50%;
+    border-radius: 8px;
+}
+#barra_pesquisa input{
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 2.3em;
+    margin-top: 2px;
+    border: 0;
+    padding: 1em;
+    padding-left: 1em;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+#barra_pesquisa button{
+    height: 3em;
+    border: 0;
+    cursor: pointer;
+    margin-top: 3px;
+}
+/*Main*/
+
+main{
+    background-image: url(imagens/fundo.png);
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+#disciplinas_cabecalho{
+    display: flex;
+    width: 59.9%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+#disciplinas_cabecalho h1{
+    font-weight: bold;
+    height: 100%;
+    font-size: 28px;
+}
+#disciplinas_cabecalho button{
+    background-color: #EFB9AF;
+    border: 0;
+    cursor: pointer;
+    font-size: 19px;
+    display: inline-flex;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 1em;
+    transition: 180ms;
+    padding: 0 1em 0 1em;
+}
+#disciplinas_cabecalho button:hover{
+    background-color: #EF797E;
+}
+#disciplinas_cabecalho button img{
+    width: 25px;
+    margin-right: 0.5em;
+    margin-top: 1.2em;
+}
+#disciplinas{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 126.13px 126.13px;
+    justify-content: space-between;
+    row-gap: 2em;
+    width: 59.9%;
+    margin: 0 auto;
+    margin-bottom: 6em;
+} 
+.disciplinas{ 
+    background-color: #FF5C6D;
+    padding: 2.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+    transform: rotate(3deg);
+    font-size: 14.5px;
+    box-shadow: 2px 2px 8px #696969;
+}
+.disciplinas h2{
+    transform: rotate(-3deg);
+}
+#divisora{
+    width: 59.9%;;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+#pagina_baixo{
+    margin: 0 auto;
+    width: 59.9%;
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+.cards{
+    background-color: #F5ECDA;
+    height: 300px;
+    display: inline-block;
+    padding: 2em;
+    width: 350px;
+}
+.card_cabecalho{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.card_cabecalho img{
+    width: 40px;
+    height: 35px;
+}
+.card_cabecalho button{
+    color: #3E79AD;
+    text-decoration: underline;
+    border: 0;  
+    background: none;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 11.5px;
+    transition: 100ms;
+}
+.card_cabecalho button:hover{
+    color: #295072;
+}
+.card_titulo{
+    display: inline-flex;
+}
+.card_titulo h1{
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.membros{
+    display: flex;
+    border-bottom: 1px solid #696969;
+}
+.membros svg{
+    padding-right: 10px;
+    border-right: 1px solid #FF5C6D;
+}
+.informacao_membro{
+    padding: 0.5em;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.informacao_membro h2{
+    font-size: 19px;
+}
+.avisos{
+    padding: 0.8em;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-left: 1px solid #FF5C6D;
+    border-bottom: 1px solid #696969;
+}
+.avisos h2{
+    font-size: 19px;
+}
+/*Footer*/
+
+footer{
+    font-size: 20px;
+    background-color: #F4ECDB;
+}
+footer address{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    width: 59.9%;
+    margin: 0 auto;
+    padding: 2em;
+}
+address a img{
+    height: 30px;
+    transition: all .10s ease-in-out;
+}
+address a img:hover{
+    transform: scale(1.1);
+}
+#redes_sociais a{
+    margin-left: 0.8em;
+}

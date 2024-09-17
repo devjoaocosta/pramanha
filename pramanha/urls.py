@@ -18,19 +18,22 @@ from django.contrib import admin
 from django.urls import path, include
 from app.views import inicial
 from app.views import tarefas
-from app.views import entrar
-from app.views import registrar
 from app.views import turma
+from app.views import home
+from app.views import adicionar_disciplina
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicial),
-    path('tarefas', tarefas),
+    path('', inicial, name="inicial"),
+    path('home', home, name="home"),
+    path('tarefas', tarefas, name="tarefas"),
     path('auth/', include('app.urls')),
-    path('turma', turma),
+    path('turma', turma, name="turma"),
+    path('adicionar_disciplina', adicionar_disciplina, name="adicionar-disciplina"),
+
 
 ]
 

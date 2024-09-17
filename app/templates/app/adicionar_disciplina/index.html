@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link href={% static 'app/registro.css' %} rel="stylesheet" />
-    <title>Pramanhã - Cadastro</title>
+    <title>Pramanhã - Adicionar Disciplina</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
@@ -25,25 +25,20 @@
 
     <main>
 
-        <form action="{% url 'registrar' %}" method="POST"> {% csrf_token %}
-            <h1>Cadastro</h1>
+        <form action="{% url 'adicionar-disciplina' %}" method="POST"> {% csrf_token %}
+            <h1>Adicionar Disciplina</h1>
         
             <div id="informacoes">
 
-                <input class="barra_texto" type="email" placeholder="Insira seu e-mail" name="email" required/>
+                <input class="barra_texto" type="text" placeholder="Nome da disciplina" name="nome" required/>
 
-                <input class="barra_texto" type="text" placeholder="Insira seu nome completo" name="username" required/>
-
-                <input class="barra_texto" type="password" placeholder="Insira sua senha" name="senha" required/>
-
-                <input class="barra_texto" type="password" placeholder="Confirme sua senha" name="confirmar_senha" required/>
+                <input class="barra_texto" type="text" placeholder="Descrição" name="descricao" required/>
 
             </div>
 
 
             <div id="botoes">
-                <button type="submit" id="registrar" name="botao_registrar">Cadastrar-se</button>
-                <a id="entrar" href="{% url 'entrar' %}">Entrar</a>
+                <button type="submit" id="registrar" name="botao_adicionar">Cadastrar Disciplina</button>
             </div>    
         </form>
 

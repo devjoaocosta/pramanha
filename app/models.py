@@ -13,7 +13,6 @@ class Turma(models.Model):
     alunos = models.ManyToManyField(Usuario)
 
 class Disciplina(models.Model):
-    turma = models.ForeignKey(Turma, on_delete=models.CASCADE)
     nome = models.CharField(max_length=100, null=False, blank=False)
     descricao = models.CharField(max_length=200, null=True)
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Tarefa
+from .models import Tarefa, Disciplina
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
@@ -22,7 +22,7 @@ def entrar(req):
 
         if user:
             login(req, user)
-            return HttpResponse('autenticado')
+            return render(req, 'app/home/index.html')
         else:
             return HttpResponse('email ou senha invalidos')
 
@@ -45,15 +45,30 @@ def registrar(req):
         user.save()
 
 
-        return HttpResponse('usuário cadastrado com sucesso')
+        return render(req, 'app/entrar/index.html')
 
 
 @login_required(login_url='/auth/entrar')
 def turma(req):
-    return render(req, "app/turma/index.html")
-    return HttpResponse('Você precisa estar logado para acessar essa página')
+    disciplinas = Disciplina.objects.all
+    return render(req, "app/turma/index.html", {"lista_disciplinas": disciplinas})
+
+@login_required(login_url='/auth/entrar')
+def home(req):
+    return render(req, 'app/home/index.html')
 
 def tarefas(req):
     tarefas = Tarefa.objects.all
     return render(req, "app/tarefas/index.html", {"tarefas": tarefas})
 
+def adicionar_disciplina(req):
+    if req.method == "GET":
+        return render(req, "app/adicionar_disciplina/index.html")
+    else:
+        nova_disciplina = Disciplina()
+        nova_disciplina.nome = req.POST.get('nome')
+        nova_disciplina.descricao = req.POST.get('descricao')
+        nova_disciplina.save()
+
+
+        return turma(req)

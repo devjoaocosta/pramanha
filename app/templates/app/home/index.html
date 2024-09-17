@@ -39,21 +39,17 @@
 
         <section id="disciplinas_cabecalho">
 
-            <h1>Infoweb 4V</h1>
+            <h1>Turmas</h1>
 
-            <button href={% url 'adicionar-disciplina'%}><img src={% static 'app/imagens/adicionar.svg' %} /> <a href={% url 'adicionar-disciplina' %}>Adicionar disciplina</a></button>
+            <button><img src={% static 'app/imagens/adicionar.svg' %} /> <span>Adicionar Turma</span></button>
 
         </section>
 
         <section id="disciplinas">
-
-            {% for disciplina in lista_disciplinas %}
-                <div class="disciplinas" id="disciplina_1" style="background-color: #FF8C45;">
-                    <h2>{{ disciplina.nome }}</h2>
-                </div>
-            {% endfor %}
-            
-         
+            <div class="disciplinas" id="disciplina_1" style="background-color: #FF8C45;">
+                <a href={% url 'turma' %}><h2>Infoweb 4V</h2></a>
+            </div>
+      
             
         </section>
 
