@@ -20,7 +20,7 @@ from app.views import inicial
 from app.views import tarefas
 from app.views import turma
 from app.views import home
-from app.views import adicionar_disciplina
+from app.views import adicionar_disciplina, editar_disciplina, update_disciplina, delete_disciplina
 
 
 
@@ -33,6 +33,10 @@ urlpatterns = [
     path('auth/', include('app.urls')),
     path('turma', turma, name="turma"),
     path('adicionar_disciplina', adicionar_disciplina, name="adicionar-disciplina"),
+    path('editar_disciplina/<int:id>', editar_disciplina, name='editar-disciplina'),
+    path('update_disciplina/<int:id>', update_disciplina, name='update-disciplina'),
+    path('delete_disciplina/<int:id>', delete_disciplina, name='delete-disciplina')
+
 
 
 ]

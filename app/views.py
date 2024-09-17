@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Tarefa, Disciplina
 from django.contrib.auth.models import User
@@ -72,3 +72,20 @@ def adicionar_disciplina(req):
 
 
         return turma(req)
+    
+def editar_disciplina(req, id):
+    disciplina = Disciplina.objects.get(id=id)
+    return render(req, "app/editar_disciplina/index.html", {'disciplina': disciplina})
+
+
+def update_disciplina(req, id):
+        disciplina = Disciplina.objects.get(id=id)
+        disciplina.nome = req.POST.get('nome')
+        disciplina.descricao = req.POST.get('descricao')
+        disciplina.save()
+        return redirect(home)
+
+def delete_disciplina(req, id):
+    disciplina = Disciplina.objects.get(id=id)
+    disciplina.delete()
+    return redirect(home)

@@ -49,7 +49,7 @@
 
             {% for disciplina in lista_disciplinas %}
                 <div class="disciplinas" id="disciplina_1" style="background-color: #FF8C45;">
-                    <h2>{{ disciplina.nome }}</h2>
+                    <a href="{% url 'editar-disciplina' disciplina.id %}"><h2>{{ disciplina.nome }}</h2></a>
                 </div>
             {% endfor %}
             
